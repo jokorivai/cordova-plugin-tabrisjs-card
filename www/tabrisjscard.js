@@ -80,7 +80,8 @@ module.exports = {
 				font: 'bold 14px',
 				textColor: '#000055'
 			}).appendTo(a);
-			new tabris.TextView({
+			a.title = title;
+			a.content = new tabris.TextView({
 				class: 'cardText',
 				layoutData: {top: [title, 3], left: 3, right:3/*, bottom: _bottom*/},
 				text: message,
