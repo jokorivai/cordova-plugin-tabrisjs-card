@@ -33,9 +33,9 @@ Not yet.
 
 Android
 
-![ScreenShot1](screenshots/MI_20161011_160604.png)
+![ScreenShot1](screenshots/MI_20161011_160604.jpg)
 
-![ScreenShot2](screenshots/MI_20161011_160630.png)
+![ScreenShot2](screenshots/MI_20161011_160630.jpg)
 
 
 ## 3. Installation
