@@ -1,0 +1,36 @@
+{
+  "name": "cordova-plugin-tabrisjs-card",
+  "version": "1.0.0",
+  "description": "This plugin allows you to create card view using plain javascript. Only for TabrisJS apps.",
+  "cordova": {
+    "id": "cordova-plugin-tabrisjs-card",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokorivai/cordova-plugin-tabrisjs-card.git"
+  },
+  "keywords": [
+	"ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "TabrisJS",
+    "Card",
+    "CardView"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Joko Rivai <buyutjokorivai@gmail.com> (https://github.com/jokorivai)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jokorivai/cordova-plugin-tabrisjs-card/issues"
+  },
+  "homepage": "https://github.com/jokorivai/cordova-plugin-tabrisjs-card"
+}

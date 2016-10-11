@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-tabrisjs-card"
+        version="1.0.0">
+
+  <name>TabrisJS Card</name>
+
+  <description>
+    This plugin allows you to create card view using plain javascript. 
+	Only for TabrisJS apps.
+  </description>
+
+  <author>Joko Rivai</author>
+
+  <license>MIT</license>
+
+  <keywords>sTabrisJS, Card, CardView</keywords>
+
+  <repo>https://github.com/jokorivai/cordova-plugin-tabrisjs-card.git</repo>
+
+  <issue>https://github.com/jokorivai/cordova-plugin-tabrisjs-card/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/tabrisjscard.js" name="TabrisJSCards">
+    <clobbers target="window.tabrisJsPlugins.cards" />
+  </js-module>
+  
+</plugin>
