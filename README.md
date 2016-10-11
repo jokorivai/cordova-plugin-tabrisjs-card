@@ -33,9 +33,9 @@ Not yet.
 
 Android
 
-![ScreenShot](screenshots/MI_20161011_160604.png)
+![ScreenShot](https://raw.githubusercontent.com/jokorivai/cordova-plugin-tabrisjs-card/master/screenshots/MI_20161011_160604.png)
 
-![ScreenShot](screenshots/MI_20161011_160630.png)
+![ScreenShot](https://raw.githubusercontent.com/jokorivai/cordova-plugin-tabrisjs-card/master/screenshots/MI_20161011_160630.png)
 
 
 ## 3. Installation
