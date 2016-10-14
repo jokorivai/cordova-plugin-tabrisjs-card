@@ -140,6 +140,33 @@ var card6 = createCard('Card6 Content', 'Card6 Title', {
 }).appendTo(page);
 ```
 
+To create card on a page with Image Caption and separate action color and position:
+```js
+var card7 = createCard('Card7 Content', 'Card7 Title', {
+  adjacentTop: card6,
+  image: 'images/001.jpg',
+  imageCaption: 'Blue Lake Girl',
+  imageCaptionColor: '#ffffff',
+  imagePosition: 'top',
+  actions: [
+    {color: '#ff0000', position:'right', image: 'img/share.png', action: function(theCard, theButton){
+      var opts = {
+        message: 'Share content for card 6',
+        subject: 'Share card 6',
+        chooserTitle: 'Bagikan'
+      };
+      window.plugins.socialsharing.shareWithOptions(opts, function(r){}, function(e){});
+    }},
+    {color: '#0000ff', position:'left', text: 'snap', image: 'img/camera.png', action: function(theCard, theButton){
+      showToast('Share');
+    }},
+    {position:'left', text: 'Great!', action: function(theCard, theButton){
+      showToast('great!');
+    }}
+  ]
+}).appendTo(page);
+```
+
 #### Accessing Card Members
 You can access card's members as follows:
 
@@ -162,6 +189,7 @@ card6.image.set('image', {src:'newimage.jpg'});
 card6.actions[0].set('image', 'icons/icon-share.png'); 
 // ---- card6.actions.length would be 0 
 // ---- if no actions were specified on card creation
+Card6.imageCaption.set('text', 'New Image Caption');
 ```
 
 ### Diposing a Card
@@ -186,16 +214,39 @@ createCard(
     right         // integer, default 6
     height        // integer, default 200    
     image: 'images/010.jpg', // string. {src: '...'} is not supported
-    imagePosition: 'top', // or 'left'. right and bottom are not supported
-    actions       // array of {image:'img.png', text: 'text', action: function(card, button){}}
+    imagePosition: 'top', // or 'left'. right and bottom are not supported,
+    imageCaption, // string, text to display on top of image,
+    imageCaptionColor,
+                  // string, CSS color
+    actions       // array of object, see below...
   }
 );
 ```
 
+`Card Actions` is an array of object, as:
+```js
+{
+  image:'img.png',  // string, image uri
+  text: 'text',     // string, arbitrary text
+  color: '#ff0000', // string, CSS color
+  position: 'left'  // string, 'left' or 'right', defaults to 'right'
+  action: function(theCard, theAction){}
+  }
+```
 
 ## 5. CREDITS
 
 This plugin is based on [TabrisJS](http://tabrisjs.com).
 The Javascript code was entirely created by me.
 
+This library is now trying to stick on Google Material Design specs, thanks to [mpost](https://github.com/mpost) for commenting
+on [This TabrisJS Issue](https://github.com/eclipsesource/tabris-js/issues/886).
+
 ## 6. CHANGELOG
+
+2016-10-14: 
+  * Add options for Card: `imageCaption` and `imageCaptionColor`.
+  * Remove margin around Card image (accourding to Material Design Specs for Card).
+  * Card Actions change from Button to Composite (because TabrisJS UI Button always have border and shadow - `elevation` cannot be set to 0).
+  * Card Actions change, now each action item can have its own foreground color.
+  * Card Actions change, now each action item can have its own position on Card Action Bar ('left' or 'right').
