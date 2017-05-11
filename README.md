@@ -246,6 +246,7 @@ on [This TabrisJS Issue](https://github.com/eclipsesource/tabris-js/issues/886).
 
 2017-05-11: 
   * Fix default parameter for `createCard()`.
+  
 2016-10-14: 
   * Add options for Card: `imageCaption` and `imageCaptionColor`.
   * Remove margin around Card image (accourding to Material Design Specs for Card).
