@@ -57,7 +57,7 @@ function ActionButton(_opts/*{text:'', image:'', background:'', textColor: ''}*/
 }
 
 module.exports = {
-	createCard: function(message, cardTitle, options){
+	createCard: function(message, cardTitle, options = {}){
 		var opts = {};
 		opts.cornerRadius = options.cornerRadius || 2;
 		opts.elevation = options.elevation || 3;

@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-tabrisjs-card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This plugin allows you to create card view using plain javascript. Only for TabrisJS apps.",
   "cordova": {
     "id": "cordova-plugin-tabrisjs-card",
